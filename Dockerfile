@@ -1,3 +1,3 @@
 FROM scratch
-ENTRYPOINT ["/yokai"]
-COPY yokai /
+ENTRYPOINT ["/test-gha"]
+COPY test-gha /

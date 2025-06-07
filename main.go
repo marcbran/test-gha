@@ -1,6 +1,6 @@
 package main
 
-import "github.com/marcbran/yokai/cmd"
+import "github.com/marcbran/test-gha/cmd"
 
 func main() {
 	cmd.Execute()

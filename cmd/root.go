@@ -8,8 +8,11 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "yokai",
-	Short: "Yokai is a MQTT-based application",
+	Use:   "test-gha",
+	Short: "Test application for GitHub Actions",
+	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("Hello World!")
+	},
 }
 
 func Execute() {
@@ -17,9 +20,4 @@ func Execute() {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
-}
-
-func init() {
-	rootCmd.AddCommand(runCmd)
-	rootCmd.AddCommand(itCmd)
 }
