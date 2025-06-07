@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/fsnotify/fsevents"
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/cobra"
 )
@@ -14,6 +15,13 @@ var rootCmd = &cobra.Command{
 	Short: "Test application for GitHub Actions",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Hello World!")
+
+		stream := fsevents.EventStream{}
+		err := stream.Start()
+		if err != nil {
+			log.Fatal(err)
+		}
+		stream.Stop()
 
 		// Create new watcher.
 		watcher, err := fsnotify.NewWatcher()
