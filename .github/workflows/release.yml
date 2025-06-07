@@ -76,7 +76,8 @@ jobs:
         with:
           name: darwin-artifacts
           path: dist/
+      - run: ls -al dist
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@9c156ee8a17a598857849441385a2041ef570552 # v6.3.0
         with:
-          args: release --config .goreleaser.darwin.yaml
+          args: release --config .goreleaser.release.yaml
