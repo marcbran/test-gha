@@ -79,4 +79,4 @@ jobs:
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@9c156ee8a17a598857849441385a2041ef570552 # v6.3.0
         with:
-          args: release --skip=build --config .goreleaser.linux.yaml
+          args: release --config .goreleaser.darwin.yaml
