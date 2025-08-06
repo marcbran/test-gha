@@ -67,12 +67,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Download Linux artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: linux-artifacts
           path: dist/
       - name: Download Darwin artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: darwin-artifacts
           path: dist/
