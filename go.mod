@@ -3,7 +3,6 @@ module github.com/marcbran/test-gha
 go 1.24.4
 
 require (
-	github.com/fsnotify/fsevents v0.2.0
 	github.com/fsnotify/fsnotify v1.9.0
 	github.com/spf13/cobra v1.9.1
 )
