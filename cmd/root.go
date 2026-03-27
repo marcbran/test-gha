@@ -20,7 +20,12 @@ var rootCmd = &cobra.Command{
 		if err != nil {
 			log.Fatal(err)
 		}
-		defer watcher.Close()
+		defer func() {
+			closeErr := watcher.Close()
+			if closeErr != nil {
+				log.Println(closeErr)
+			}
+		}()
 
 		// Start listening for events.
 		go func() {
